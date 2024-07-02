@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulario</title>
+  </head>
+  <body>
+    <form>
+      <div class="modelo">
+        <label for="modeloCarro">Modelo do carro:</label>
+        <input
+          id="modeloCarro"
+          type="text"
+          name="modelo"
+          placeholder="Ex: Supra..."
+        />
+      </div>
+
+      <div class="marca">
+        <label for="marcaCarro">Marca do carro:</label>
+        <input
+          type="text"
+          name="marca"
+          id="marcaCarro"
+          placeholder="Ex: Toyota..."
+        />
+      </div>
+
+      <div class="ano">
+        <label for="anoCarro">Ano do carro:</label>
+        <input type="text" name="ano" id="anoCarro" placeholder="1993" />
+      </div>
+
+      <div class="quilometragem">
+        <label for="kmCarro">Quilometragem do carro:</label>
+        <input type="text" name="km" id="kmCarro" placeholder="30000" />
+      </div>
+
+      <div class="valor">
+        <label for="valorCarro">Valor do carro:</label>
+        <input type="text" name="valor" id="valorCarro" placeholder="1500000" />
+      </div>
+
+      <div class="tipo">
+        <span>Tipo do carro:</span>
+        <label for="tipoNovo">Novo</label>
+        <input type="radio" name="tipo" id="tipoNovo" />
+
+        <label for="tipoUsado">Usado</label>
+        <input type="radio" name="tipo" id="tipoUsado" />
+      </div>
+
+      <div class="adicionais">
+        <span>Adicionais:</span>
+        <label for="airbag">Airbag</label>
+        <input type="checkbox" name="adc" id="airbag" />
+
+        <label for="alarme">Alarme</label>
+        <input type="checkbox" name="adc" id="alarme" />
+
+        <label for="arCondicionado">Ar Condicionado</label>
+        <input type="checkbox" name="adc" id="arCondicionado" />
+      </div>
+
+      <div class="emplacamento">
+        <label for="finalPlaca">Final da Placa:</label>
+        <select name="placa" id="finalPlaca">
+          <option value="0" selected>0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <input type="submit" value="Enviar" name="enviar" id="botaoEnviar" />
+    </form>
+  </body>
+</html>
