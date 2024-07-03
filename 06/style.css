@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.headerSection {
+  height: 14vh;
+  background-color: rgb(231, 200, 61);
+}
+
+.navSearch {
+  height: 7vh;
+  text-align: center;
+}
+
+#textSearch {
+  height: 2.5vh;
+  margin-top: 2vh;
+}
+
+.navMenu {
+  border-style: solid;
+  line-height: 6vh;
+  text-align: center;
+}
+
+.navMenu a {
+  vertical-align: middle;
+  margin-left: 2vw;
+}
+
+.navMenu a {
+  text-decoration: none;
+  color: black;
+}
+
+.contentSection {
+  height: 86vh;
+  background-color: rgb(226, 226, 226);
+  text-align: center;
+}
+
+.offerSection {
+  width: 80vw;
+  height: 15vh;
+  margin-top: 5vh;
+  border-radius: 1vw;
+  background-color: white;
+  display: inline-block;
+}
+
+.offer,
+.firstOffer {
+  width: 20vw;
+  height: 15vh;
+  float: left;
+  text-align: left;
+}
+
+.firstOffer {
+  border-right: 0.3vh solid black;
+}
+
+.titleOffer {
+  margin-top: 4.5vh;
+}
+
+.titleOffer,
+.subTitleOffer {
+  margin-left: 1vw;
+}
