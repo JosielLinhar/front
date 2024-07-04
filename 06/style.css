@@ -65,6 +65,14 @@ img {
   color: black;
 }
 
+.navMenu a:hover {
+  padding: 0.5%;
+  border-radius: 0.2vw;
+  background-color: gray;
+  color: white;
+  transition: 0.5s;
+}
+
 .contentSection {
   height: 86vh;
   background-color: rgb(226, 226, 226);
@@ -72,12 +80,10 @@ img {
 }
 
 .offerSection {
-  width: 80vw;
+  width: 85vw;
   height: 15vh;
-  margin-top: 5vh;
   border-radius: 1vw;
   background-color: white;
-  display: inline-block;
 }
 
 .offer,
@@ -99,4 +105,43 @@ img {
 .titleOffer,
 .subTitleOffer {
   margin-left: 1vw;
+}
+
+.contents {
+  margin-top: 5vh;
+  display: inline-block;
+}
+
+.offerDays {
+  width: 85vw;
+  text-align: center;
+  display: inline-block;
+}
+
+.cards {
+  background-color: white;
+  width: 15vw;
+  height: 315px;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  float: left;
+  text-align: center;
+  border-radius: 0.2vw;
+  overflow: hidden;
+}
+
+.cards:hover {
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  height: 340px;
+}
+
+.cardInfo {
+  border-top: 0.2vh solid rgba(0, 0, 0, 0.253);
+}
+
+.cards h2,
+.cards h3 {
+  text-align: left;
+  margin-left: 2.5vw;
 }
