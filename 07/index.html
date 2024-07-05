@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Cadastro de Lojas</h1>
+    <section class="container">
+      <form id="sectionForm">
+        <div class="inputs">
+          <label for="storeName">Nome da Loja: </label>
+          <input
+            type="text"
+            id="storeName"
+            name="name"
+            placeholder="informe o nome da loja"
+          />
+        </div>
+        <div class="inputs">
+          <label for="storeAddress">Endereço: </label>
+          <input
+            type="text"
+            id="storeAddress"
+            name="address"
+            placeholder="Rua, Bairro e Estado"
+          />
+        </div>
+        <div class="inputs">
+          <label for="storeDays">Dias de funcionamento: </label>
+          <input
+            type="text"
+            id="storeDays"
+            name="days"
+            placeholder="Segunda a Sexta"
+          />
+        </div>
+        <div class="inputs">
+          <label for="storeHours">Horário de funcionamento: </label>
+          <input
+            type="text"
+            name="hours"
+            id="storeHours"
+            placeholder="7:30 as 12:00, 13:00 as 17:00"
+          />
+        </div>
+        <input type="submit" value="Cadastrar" id="botao" />
+      </form>
+    </section>
+  </body>
+</html>
