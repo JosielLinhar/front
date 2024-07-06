@@ -17,14 +17,48 @@ inputs.forEach((x) => {
   });
 });
 
-btn.addEventListener("click", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  if (inputName.value !== "") console.log(inputName.value);
+  if (inputName.value !== "") {
+    if (inputAddres.value !== "") {
+      if (inputDays.value !== "") {
+        if (inputHours.value !== "") {
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData);
 
-  if (inputAddres.value !== "") console.log(inputAddres.value);
+          try {
+            console.log("Preparando envio");
+            const response = await fetch(
+              "https://apigenerator.dronahq.com/api/IImMAZ38/storeData",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              }
+            );
 
-  if (inputDays.value !== "") console.log(inputDays.value);
+            if (!response.ok) {
+              throw new Error(`Error status: ${response.status}`);
+            }
 
-  if (inputHours.value !== "") console.log(inputHours.value);
+            const json = await response.json();
+            console.log(json);
+          } catch (error) {
+            console.log(error.message);
+          }
+        } else {
+          return alert("Preencha horário de funcionamento");
+        }
+      } else {
+        return alert("Preencha dias de funcionamento");
+      }
+    } else {
+      return alert("Preencha o endereço");
+    }
+  } else {
+    return alert("Preencha nome da loja");
+  }
 });
