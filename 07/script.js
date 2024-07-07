@@ -24,31 +24,16 @@ form.addEventListener("submit", async (e) => {
     if (inputAddres.value !== "") {
       if (inputDays.value !== "") {
         if (inputHours.value !== "") {
-          const formData = new FormData(form);
-          const data = Object.fromEntries(formData);
+          console.log("preparando envio");
 
-          try {
-            console.log("Preparando envio");
-            const response = await fetch(
-              "https://apigenerator.dronahq.com/api/IImMAZ38/storeData",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-              }
-            );
+          let list = [
+            inputName.value,
+            inputAddres.value,
+            inputDays.value,
+            inputHours.value,
+          ];
 
-            if (!response.ok) {
-              throw new Error(`Error status: ${response.status}`);
-            }
-
-            const json = await response.json();
-            console.log(json);
-          } catch (error) {
-            console.log(error.message);
-          }
+          localStorage.setItem("cad", list);
         } else {
           return alert("Preencha horário de funcionamento");
         }
