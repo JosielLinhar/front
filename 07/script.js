@@ -5,7 +5,8 @@ const inputName = document.getElementById("storeName");
 const inputAddres = document.getElementById("storeAddress");
 const inputDays = document.getElementById("storeDays");
 const inputHours = document.getElementById("storeHours");
-const btn = document.getElementById("botao");
+const btnSub = document.getElementById("botaoCad");
+const btnRec = document.getElementById("botaoRec");
 
 inputs.forEach((x) => {
   x.addEventListener("focus", () => {
@@ -46,4 +47,14 @@ form.addEventListener("submit", async (e) => {
   } else {
     return alert("Preencha nome da loja");
   }
+});
+
+btnRec.addEventListener("click", () => {
+  let arqRec = localStorage.getItem("cad");
+  let list = arqRec.split(",");
+
+  inputName.value = list[0];
+  inputAddres.value = list[1];
+  inputDays.value = list[2];
+  inputHours.value = list[3];
 });
